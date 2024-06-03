@@ -1,11 +1,12 @@
-import { API_AUCTION_URL } from "../constants.mjs";
+import { API_HOST_URL, API_AUTH, API_LOGIN } from "../constants.mjs";
+// import { API_AUCTION_URL } from "../constants.mjs";
 import {save} from "../../storage/index.mjs";
 
-const action = "/auth/login";
-const method = "POST";
+// const action = "/auth/login";
+// const method = "POST";
 
 export async function login(profile) {
-  const loginURL = API_AUCTION_URL + action;
+  // const loginURL = API_AUCTION_URL + action;
  
   const response = await fetch(loginURL, {
     headers: {
