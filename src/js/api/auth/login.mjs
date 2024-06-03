@@ -1,25 +1,42 @@
-import { API_AUCTION_URL } from "../constants.mjs";
-import * as storage from "../../storage/index.mjs";
-
-const action = "/auth/login";
-const method = "post";
+import { API_HOST_URL, API_AUTH, API_LOGIN } from "../constants.mjs";
+import { authFetch } from "../authFetch.mjs";
+import { save } from "../../storage/index.mjs";
 
 export async function login(profile) {
-  const loginURL = API_AUCTION_URL + action;
- 
-  const response = await fetch(loginURL, {
-    headers: {
-      "Content-Type": "application/json"
-    },
-    method,
-    body: JSON.stringify(profile)
-  })
-  
-  const {accessToken, ...userProfile} = await response.json()
+  const response = await authFetch(API_HOST_URL + API_AUTH + API_LOGIN, {
+    method: "POST",
+    body: JSON.stringify(profile),
+  });
 
-  storage.save("token", accessToken)
+  if (response.ok) {
+    const { accessToken, ...profile } = (await response.json()).data;
+    save("token", accessToken);
+    save("profile", profile);
 
-  storage.save("profile", userProfile)
+    alert("You are now logged in");
 
-  alert("You are now logged in")
+    return profile;
+  }
+
+  throw new Error("Could not login");
 }
+
+
+
+// export async function login(profile) {
+//   const response = await fetch(loginURL, {
+//     headers: {
+//       "Content-Type": "application/json"
+//     },
+//     method: "POST",
+//     body: JSON.stringify(profile)
+//   })
+  
+//   const {accessToken, ...userProfile} = await response.json()
+
+//   storage.save("token", accessToken)
+
+//   storage.save("profile", userProfile)
+
+//   alert("You are now logged in")
+// }
