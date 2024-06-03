@@ -15,7 +15,7 @@ export async function setUpdateProfileListener() {
 
     form.avatar.value = profile.avatar;
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault()
       const form = event.target;
       const formData = new FormData(form);  
@@ -24,7 +24,12 @@ export async function setUpdateProfileListener() {
       profile.name = name;
       profile.email = email;
 
-      updateProfile(profile)
-      })
+      try {
+        await updateProfile(profile);
+        window.location.href = "";
+      } catch {
+        console.log("error");
+      }
+      });
     }
 }
