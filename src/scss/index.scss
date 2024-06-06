@@ -6,3 +6,13 @@
 .bg-body-tertiary {
   --bs-bg-opacity: 0;
 }
+
+.form-control {
+  --#{$prefix}border-radius: 0%;
+}
+
+.btn {
+  --#{$prefix}btn-border-radius: 0%;
+  --bs-btn-bg: #fbb615;
+}
+
