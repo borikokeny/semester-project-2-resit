@@ -31,16 +31,38 @@ export async function renderSingleListingPage() {
   sellerEmail.innerHTML = listing.seller.email;
 
   const biddingList = listing.bids;
+
+    // const createdDate = new Date(bidder.created);
+    // const fineDate = createdDate.toDateString();
+    // const fineDate = Math.floor(createdDate);
+    // created.innerText = `${fineDate}`;
+      // console.log(fineDate);
+
+// if(listing.bids) {
+//   const bidded = document.createElement("p");
+//   const biddingDate = new Date(listing.bids.created);
+//   // bids.innerText = `${}`;
+//   console.log(biddingDate);
+
+
+
+//   biddersList.append(bidded);
+// }
+
+
+  
   const bidderInfo = biddingList.map((bidder) => {
   return `${bidder.bidderName} ${bidder.amount} ${bidder.created}`;
   });
 
   console.log(bidderInfo)
 
+
   bidderInfo.forEach(bidderItems => {
    
     const bidderCard = document.createElement("div");
     bidderCard.innerHTML = bidderItems;
+
     biddersList.append(bidderCard);
   });
 }
