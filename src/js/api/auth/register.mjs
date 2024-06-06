@@ -12,6 +12,10 @@ export async function register(profile) {
     },
     method,
     body: JSON.stringify(profile)
+    // body: JSON.stringify({
+    //   name: profile.name,
+    //   email: profile.email
+    // })
   })
 
   const result = await response.json()

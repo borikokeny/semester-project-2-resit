@@ -5,6 +5,7 @@ import { logout } from "./api/auth/logout.mjs";
 
 const path = location.pathname;
 logout()
+// listeners.setAvatar()
 switch (path) {
   case '/profile/login/':
     listeners.setLoginFormListener()

@@ -14,6 +14,6 @@ export async function renderProfile() {
     profileImage.src = profile.avatar;
     profileImage.style.objectFit = "cover";
   } else {
-    profileImage.src = "/images/Canon_eos.jpg";
+    profileImage.src = "/images/Profile-img-placeholder.jpg";
   }
 }
