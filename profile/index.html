@@ -18,7 +18,7 @@
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="../images/Bidify_logo.jpg" alt="BIDWHIZ logo" class="bi me-2" role="img" width="192" height="71">
             </a>
 
-            <form id="searchForm" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <form id="searchForm" class="col-12 col-lg-auto ms-5 mb-3 mb-lg-0 me-lg-3" role="search">
               <input id="search" type="search" class="form-control" placeholder="Search..." aria-label="Search">
             </form>
 
@@ -30,9 +30,9 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <!-- <li><a href="/" class="nav-link px-2 link-secondary">HOME</a></li> -->
               <li><a href="../listings/" class="nav-link px-2 link-body-emphasis">Listings</a></li>
-              <li><a href="../listing/" class="nav-link px-2 link-body-emphasis">Add  a Listing</a></li>
+              <li><a href="../listing/" class="nav-link px-2 link-body-emphasis">Add a Listing</a></li>
               <li><a href="../profile/" class="nav-link me-5 px-2 link-body-emphasis">My page</a></li>
-              <li><div class="authLinks ms-5 mt-1">
+              <li><div class="authLinks ms-0 mt-1">
                 <!-- <a class="nav-link px-2 link-body-emphasis" href="#">My page</a> -->
                 <button>Log out</button>
               </div></li>
@@ -68,6 +68,15 @@
           <div class="row">
             <div class="col-6">
               <img src="/images/img-placeholder.png" id="profileImage" class="img-fluid bd-placeholder-img " role="img" width="400" height="140"/>
+              <div class="form-group mb-3">
+                <label class="ps-1 mt-3 mb-1">Update your avatar</label>
+                  <div class="container">
+                    <div class="row">
+                      <input class="col-8 form-control" type="url" name="avatar" placeholder="Avatar url">
+                      <button class="col-4 btn btn-primary mt-4" href="#">Update</button>
+                    </div>
+                  </div>
+              </div>
             </div>
             <div class="col-6">
               <form id="editProfile" class="mb-3">
@@ -79,11 +88,11 @@
                   <label class="mb-1">Email</label>
                   <input class="form-control mb-2" type="text" name="email" disabled>
                 </div>
-                <!-- <div class="form-group mb-1">
-                  <label class="mb-1">My Credits</label>
-                  <span id="credit" class="text-body-secondary fw-bold ms-5"></span>
+
+                <!-- <div class="form-group form-floating mb-1">
                   <input class="form-control mb-2" type="text" name="credit" disabled>
-                  
+                  <label id="credit" class="mb-1">My Credits</label>
+                  <span  class="text-body-secondary fw-bold ms-5"></span>
                 </div> -->
 
 
@@ -98,7 +107,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="form-group mb-3">
+                <!-- <div class="form-group mb-3">
                   <label class="ps-1 mt-3 mb-1">Update your avatar</label>
                     <div class="container">
                       <div class="row">
@@ -106,7 +115,7 @@
                         <button class="col-4 btn btn-primary mt-4" href="#">Update</button>
                       </div>
                     </div>
-                </div>
+                </div> -->
               </form>
 
               
