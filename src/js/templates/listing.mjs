@@ -1,4 +1,5 @@
 import { viewListing } from "../api/listing/view.mjs";
+import { renderBidderTemplate } from "./bidders.mjs";
 
 export async function renderSingleListingPage() {
   const queryString = window.location.search;
@@ -62,39 +63,24 @@ export async function renderSingleListingPage() {
   sellerName.innerHTML = listing.seller.name;
   sellerEmail.innerHTML = listing.seller.email;
 
-  const biddingList = listing.bids;
+  // const biddingList = listing.bids;
 
-    // const createdDate = new Date(bidder.created);
-    // const fineDate = createdDate.toDateString();
-    // const fineDate = Math.floor(createdDate);
-    // created.innerText = `${fineDate}`;
-      // console.log(fineDate);
+  if (listing.bids){
+    renderBidderTemplate(listing.bids, biddersList);
+  }
 
-// if(listing.bids) {
-//   const bidded = document.createElement("p");
-//   const biddingDate = new Date(listing.bids.created);
-//   // bids.innerText = `${}`;
-//   console.log(biddingDate);
+  // const bidderInfo = biddingList.map((bidder) => {
+  // return `${bidder.bidderName} ${bidder.amount} ${bidder.created}`;
+  // });
+
+  // console.log(bidderInfo)
 
 
-
-//   biddersList.append(bidded);
-// }
-
-
-  
-  const bidderInfo = biddingList.map((bidder) => {
-  return `${bidder.bidderName} ${bidder.amount} ${bidder.created}`;
-  });
-
-  console.log(bidderInfo)
-
-
-  bidderInfo.forEach(bidderItems => {
+  // bidderInfo.forEach(bidderItems => {
    
-    const bidderCard = document.createElement("div");
-    bidderCard.innerHTML = bidderItems;
+  //   const bidderCard = document.createElement("div");
+  //   bidderCard.innerHTML = bidderItems;
 
-    biddersList.append(bidderCard);
-  });
+  //   biddersList.append(bidderCard);
+  // });
 }
