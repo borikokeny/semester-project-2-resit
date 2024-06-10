@@ -23,7 +23,7 @@ export async function renderSingleListingPage() {
   title.innerHTML = listing.title;
   description.innerHTML = listing.description;
   endsAt.innerHTML = listing.endsAt;
-  endsAt.textContent = `Listing ends at: ${endsAt.innerText}`;
+  endsAt.textContent = `Listing ends at ${endsAt.innerText}`;
   bids.innerHTML = listing._count.bids;
   bids.textContent = `Current BID: ${bids.innerText}`;
   sellerAvatar.src = listing.avatar ?? `/images/img-placeholder.png`;
