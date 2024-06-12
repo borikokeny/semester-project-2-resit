@@ -4,11 +4,11 @@ import { authFetch } from "../authFetch.mjs";
 const action = "/listings";
 
 export async function viewListings() {
-const updateListingURL = `${API_AUCTION_URL}${action}`;
+const updateListingURL = `${API_AUCTION_URL}${action}?sort=created`;
 
-  const response = await authFetch(updateListingURL)
+  const response = await authFetch(updateListingURL);
 
-  return await response.json()
+  return await response.json();
 }
 
 export async function viewListing(id) {
