@@ -27,3 +27,16 @@
 .card-img-top {
   --bs-card-inner-border-radius: 0%;  
 }
+
+#descBox {
+  inline-size: 400px;
+  overflow-wrap: break-word;
+}
+
+//  a:visited {
+//   color: yellow;
+// }
+
+.active {
+  font-weight: bold;
+}

@@ -10,6 +10,7 @@ export async function renderSingleListingPage() {
 
   const img = document.querySelector("#listingImg");
   const title = document.querySelector("#listingTitle");
+  // const descriptionBox = document.querySelector("#descBox");
   const description = document.querySelector("#listingDescription");
   const endsAt = document.querySelector("#listingEndsAt");
   const bids = document.querySelector("#listingBids");
@@ -22,7 +23,10 @@ export async function renderSingleListingPage() {
   document.title = listing.title;
   img.src = listing.media[0] ?? `/images/img-placeholder.png`;
   title.innerHTML = listing.title;
+  // descriptionBox.style.inline-size = "150px"; 
+
   description.innerHTML = listing.description;
+  
 
   if(listing.endsAt) {
     const endsAtDate = document.querySelector("#listingEndsAt");
