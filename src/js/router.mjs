@@ -3,15 +3,18 @@ import * as templates from "./templates/index.mjs";
 import * as listingMethods from "./api/listing/index.mjs";
 import { logout } from "./api/auth/logout.mjs";
 
+
+
 const path = location.pathname;
-logout()
+
+logout();
 // listeners.setAvatar()
 switch (path) {
   case '/profile/login/':
-    listeners.setLoginFormListener()
+    listeners.setLoginFormListener();
     break;
   case '/profile/register/':
-    listeners.setRegisterFormListener()
+    listeners.setRegisterFormListener();
     break;  
   case '/':
     listeners.search()
