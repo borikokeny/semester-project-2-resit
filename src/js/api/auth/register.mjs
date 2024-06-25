@@ -26,12 +26,12 @@
 import { API_AUCTION_REG } from "../constants.mjs";
 import { headers } from "../headers.mjs";
 
-export async function register(name, email, password, avatar) {
+export async function register(profile) {
   try {
     const response = await fetch(API_AUCTION_REG, {
       headers: headers(),
       method: "POST",
-      body: JSON.stringify({ name, email, password, avatar}),
+      body: JSON.stringify({ profile}),
     });
 
   if (response.ok) {

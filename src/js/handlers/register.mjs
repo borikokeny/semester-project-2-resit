@@ -7,10 +7,13 @@ export function setRegisterFormListener() {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const form = event.target;
+      console.log(form);
       const formData = new FormData(form);
-      const {name, email, password, avatar} = Object.fromEntries(formData.entries());
+      const profile = Object.fromEntries(formData.entries());
+
+      console.log(profile);
       try {
-        await register(name, email, password, avatar);
+        await register(profile);
         window.location.href = "../../../profile/login/index.html";
       } catch (error) {
         console.error("error");
