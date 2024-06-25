@@ -1,14 +1,23 @@
 import { API_AUCTION_URL } from "../constants.mjs";
-import { authFetch } from "../authFetch.mjs";
+import { authFetch, headers } from "../authFetch.mjs";
 
 const action = "/listings";
 
 export async function viewListings() {
-const updateListingURL = `${API_AUCTION_URL}${action}?sort=created`;
-
-  const response = await authFetch(updateListingURL);
-
-  return await response.json();
+  try {
+    const response = await authFetch(`${API_AUCTION_URL}${action}?_seller=true&_bids=true&sort=created`, {
+      method: "GET",
+      headers: headers(),
+    });
+    
+    if (response.ok) {
+      return await response.json();
+    } else {
+      throw new Error(response.statusText);
+    }
+  } catch (error) {
+    throw new Error("Cannot fetch data");
+  }  
 }
 
 export async function viewListing(id) {

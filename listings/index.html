@@ -18,8 +18,10 @@
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="../images/Bidify_logo.jpg" alt="BIDWHIZ logo" class="bi me-3" role="img" width="192" height="71">
             </a>
 
-            <form class="col-12 col-lg-auto ms-5 ps-5 mb-3 mb-lg-0 me-lg-3" role="search">
-              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            <form id="searchForm" class="col-12 col-lg-auto ms-5 ps-5 mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" 
+              id="searchInput"
+              class="form-control" placeholder="Search..." aria-label="Search">
             </form>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +61,7 @@
   </header>
 <div class="album py-5 bg-body-tertiary">
   <div class="container">
-    <div id="search-result" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm"></div>
+    <div id="searchResult" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm"></div>
     <div id="listings" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm"></div>
   </div>
 </div>  
