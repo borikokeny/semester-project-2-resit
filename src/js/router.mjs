@@ -11,7 +11,7 @@ switch (path) {
     listeners.setLoginFormListener()
     break;
   case '/profile/register/':
-    listeners.setRegisterFormListener()
+    // listeners.setRegisterFormListener()
     break;  
   case '/':
     listeners.search()

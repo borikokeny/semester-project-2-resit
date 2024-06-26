@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration Page</title>
-<link rel="stylesheet" href="/dist/css/styles.css" />
-  <link rel="stylesheet" href="/dist/css/index.css">
+<link rel="stylesheet" href="/dist/css/styles.css"/>
+  <link rel="stylesheet" href="/dist/css/index.css"/>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script type="module" src="/src/js/index.mjs" defer></script>
+  <script type="module" src="../../src/js/index.mjs" defer></script>
+  <!-- <script>alert("wow look what Javascript did!");</script> -->
 </head>
 <body>
   <header class="p-3 mb-3 border-bottom">
@@ -30,7 +31,7 @@
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-0 rounded-0 border shadow-lg">
       <div class="col p-3 p-lg-5 pt-lg-4">
         <img class="d-block mx-auto mb-4 mt-5" src="/images/Bidify_logo.jpg" alt="" width="200" height="80">
-        <form class="rounded-3 bg-body-tertiary" id="registerForm">
+        <form id="registerForm" class="rounded-3 bg-body-tertiary">
         <div class="form-floating mb-3">
           <input type="name" class="form-control" id="floatingInput" placeholder="name" name="name" required pattern="^[\w]+$" title="Username can only contain upper and lower case letters, numbers and underscore. Example: myUser_123">
           <label for="floatingInput">Name</label>

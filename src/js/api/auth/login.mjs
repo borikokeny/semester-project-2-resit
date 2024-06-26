@@ -1,5 +1,6 @@
 import { API_AUCTION_URL } from "../constants.mjs";
 import {save} from "../../storage/index.mjs";
+import { headers } from "../headers.mjs";
 
 const action = "/auth/login";
 const method = "POST";
@@ -8,9 +9,7 @@ export async function login(profile) {
   const loginURL = API_AUCTION_URL + action;
  
   const response = await fetch(loginURL, {
-    headers: {
-      "Content-Type": "application/json"
-    },
+    headers: headers(),
     method,
     body: JSON.stringify(profile)
   })

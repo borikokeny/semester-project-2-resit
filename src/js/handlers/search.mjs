@@ -38,6 +38,9 @@ function searchResults(listingsFiltered) {
   } else {
     renderListingTemplates(listingsFiltered, searchContainer);
   }
+
+  console.log(listingsFiltered);
+  console.log("h");
 }
 
 

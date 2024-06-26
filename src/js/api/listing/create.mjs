@@ -1,5 +1,6 @@
 import { API_AUCTION_URL } from "../constants.mjs";
-import { authFetch } from "../authFetch.mjs";
+// import { authFetch } from "../authFetch.mjs";
+import { headers } from "../headers.mjs";
 
 const action = "/listings";
 const method = "post";
@@ -7,8 +8,9 @@ const method = "post";
 export async function createListing(postData) {
   const createListingURL = API_AUCTION_URL + action;
 
-  const response = await authFetch(createListingURL, {
+  const response = await fetch(createListingURL, {
     method,
+    headers: headers(),
     body: JSON.stringify({
       title: postData.title,
       description: postData.description,
