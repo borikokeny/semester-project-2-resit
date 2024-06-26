@@ -4,6 +4,7 @@ import * as templates from "./templates/index.mjs";
 import * as listingMethods from "./api/listing/index.mjs";
 
 listeners.setRegisterFormListener()
+listeners.setLoginFormListener()
 
 
 async function listingsTemplate() {
