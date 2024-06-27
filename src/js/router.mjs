@@ -17,6 +17,8 @@ switch (path) {
     listeners.search()
     listeners.setLogoutFormListener()
     break;  
+  case '/create/':
+    listeners.search()
   case '/profile/':
     listeners.search()
     // templates.renderProfile()

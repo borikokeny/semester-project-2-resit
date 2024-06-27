@@ -6,15 +6,15 @@ export async function setUpdateProfileListener() {
 
   if (form) {
     const { name, email } = load("profile");
-    form.name.value = name;
-    form.email.value = email;
+    form.name = name;
+    form.email = email;
     console.log("d");
     const button = form.querySelector("button");
 
     const profile = await viewProfile(name);
  
 
-    form.avatar.value = profile.avatar;
+    form.avatar = profile.avatar;
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault()

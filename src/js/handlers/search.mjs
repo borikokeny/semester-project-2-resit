@@ -34,7 +34,9 @@ function searchResults(listingsFiltered) {
   searchContainer.innerHTML = "";
 
   if (listingsFiltered.length === 0) {
+    alert("Sorry, no results for this search");
     return error;
+    
   } else {
     renderListingTemplates(listingsFiltered, searchContainer);
   }

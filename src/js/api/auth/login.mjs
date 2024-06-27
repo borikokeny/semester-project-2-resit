@@ -21,7 +21,7 @@ export async function login(email, password) {
 
     alert("You are now logged in");
 
-    // return profile;
+    return profile;
   }
 
   throw new Error("Could not login");
