@@ -1,5 +1,6 @@
 import { API_AUCTION_URL } from "../constants.mjs";
-import { authFetch } from "../authFetch.mjs";
+// import { authFetch } from "../authFetch.mjs";
+import { headers } from "../headers.mjs";
 
 const action = "/listings";
 const method = "post";
@@ -12,8 +13,9 @@ export async function addABid(bid, id) {
 
     const addABidUrl = `${API_AUCTION_URL}${action}/${id}/bids`;
 
-    const response = await authFetch(addABidUrl, {
+    const response = await fetch(addABidUrl, {
       method,
+      headers: headers(),
       body: JSON.stringify({ amount: bid }),
     });
 

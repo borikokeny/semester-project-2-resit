@@ -1,5 +1,5 @@
 import { API_AUCTION_URL } from "../constants.mjs";
-import { authFetch } from "../authFetch.mjs";
+// import { authFetch } from "../authFetch.mjs";
 
 const action = "/listings";
 const method = "delete";
@@ -10,7 +10,7 @@ export async function removeListing(id) {
   }
 const updateListingURL = `${API_AUCTION_URL}${action}/${id}`;
 
-  const response = await authFetch(updateListingURL, {
+  const response = await fetch(updateListingURL, {
     method
   })
 

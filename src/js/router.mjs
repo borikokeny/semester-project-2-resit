@@ -11,17 +11,19 @@ switch (path) {
     listeners.setLoginFormListener()
     break;
   case '/profile/register/':
-    listeners.setRegisterFormListener()
+    // listeners.setRegisterFormListener()
     break;  
   case '/':
     listeners.search()
     listeners.setLogoutFormListener()
     break;  
+  case '/create/':
+    listeners.search()
   case '/profile/':
     listeners.search()
-    templates.renderProfile()
-    listeners.setUpdateProfileListener()
-    listeners.setCreateListingFormListener()
+    // templates.renderProfile()
+    // listeners.setUpdateProfileListener()
+    // listeners.setCreateListingFormListener()
     break;
   case '/listing/edit/':
     listeners.setUpdateListingFormListener()

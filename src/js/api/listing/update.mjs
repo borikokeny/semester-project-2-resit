@@ -1,5 +1,6 @@
 import { API_AUCTION_URL } from "../constants.mjs";
-import { authFetch } from "../authFetch.mjs";
+// import { authFetch } from "../authFetch.mjs";
+import { headers } from "../headers.mjs";
 
 const action = "/listings";
 const method = "put";
@@ -10,8 +11,9 @@ export async function updateListing(postData) {
   }
   const updateListingURL = `${API_AUCTION_URL}${action}/${postData.id}`;
 
-  const response = await authFetch(updateListingURL, {
+  const response = await fetch(updateListingURL, {
     method,
+    headers: headers(),
     body: JSON.stringify(postData)
   })
 

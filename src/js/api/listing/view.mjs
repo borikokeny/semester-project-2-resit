@@ -1,23 +1,33 @@
 import { API_AUCTION_URL } from "../constants.mjs";
-import { authFetch } from "../authFetch.mjs";
+import { headers } from "../headers.mjs";
 
 const action = "/listings";
 
 export async function viewListings() {
-const updateListingURL = `${API_AUCTION_URL}${action}?sort=created`;
-
-  const response = await authFetch(updateListingURL);
-
-  return await response.json();
+  try {
+    const response = await fetch(`${API_AUCTION_URL}${action}?_seller=true&_bids=true&sort=created`, {
+      method: "GET",
+      headers: headers(),
+    });
+    
+    if (response.ok) {
+      return await response.json();
+    } else {
+      throw new Error(response.statusText);
+    }
+  } catch (error) {
+    throw new Error("Cannot fetch data");
+  }  
 }
 
 export async function viewListing(id) {
   if (!id) {
     throw new Error("Get needs a post ID")
   }
-  const viewListingURL = `${API_AUCTION_URL}${action}/${id}?_seller=true&_bids=true`;
-  
-    const response = await authFetch(viewListingURL);
+  const response = await fetch(`${API_AUCTION_URL}${action}/${id}?_seller=true&_bids=true`, {
+    method: "GET",
+    headers: headers(),
+  });
   
     return await response.json();
   }
