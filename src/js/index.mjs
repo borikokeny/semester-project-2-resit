@@ -5,7 +5,9 @@ import * as listingMethods from "./api/listing/index.mjs";
 
 listeners.setRegisterFormListener()
 listeners.setLoginFormListener()
-
+listeners.setCreateListingFormListener()
+listeners.setUpdateProfileListener()
+templates.renderProfile()
 
 async function listingsTemplate() {
   const listings = await listingMethods.viewListings();

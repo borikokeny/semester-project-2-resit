@@ -8,10 +8,11 @@ export async function setUpdateProfileListener() {
     const { name, email } = load("profile");
     form.name.value = name;
     form.email.value = email;
-
+    console.log("d");
     const button = form.querySelector("button");
 
     const profile = await viewProfile(name);
+ 
 
     form.avatar.value = profile.avatar;
 

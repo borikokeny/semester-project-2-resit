@@ -11,7 +11,7 @@ import { headers } from "../headers.mjs";
   
     if (response.ok) {
       alert("You are now registered");
-      console.log("h");
+      // console.log("h");
       console.log(profile);
       return await response.json();
     } else {

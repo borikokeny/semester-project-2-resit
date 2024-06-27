@@ -12,7 +12,7 @@ export function setLoginFormListener() {
 
       try {
         await login(email, password);
-        window.location.href = "/index.html";
+        location.assign("/listings");
       } catch {
         console.log("error");
       }

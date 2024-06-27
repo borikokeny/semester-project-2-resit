@@ -19,9 +19,9 @@ switch (path) {
     break;  
   case '/profile/':
     listeners.search()
-    templates.renderProfile()
-    listeners.setUpdateProfileListener()
-    listeners.setCreateListingFormListener()
+    // templates.renderProfile()
+    // listeners.setUpdateProfileListener()
+    // listeners.setCreateListingFormListener()
     break;
   case '/listing/edit/':
     listeners.setUpdateListingFormListener()

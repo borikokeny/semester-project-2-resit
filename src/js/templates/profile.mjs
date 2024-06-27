@@ -7,7 +7,11 @@ export async function renderProfile() {
 
   const profileImage = document.querySelector("#profileImage");
   const credit = document.querySelector("#credit");
+  // const userName = document.querySelector("#userName");
+  // const userEmail = document.querySelector("#userEmail");
 
+  // userName.innerText = profile.name;
+  // userEmail.innerText = profile.email;
   credit.innerText = profile.credits;
 
   if (profile.avatar) {
