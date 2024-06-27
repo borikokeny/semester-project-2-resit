@@ -27,7 +27,7 @@ export function listingTemplate(postData) {
   
   const bid = document.createElement('p');
   bid.innerText = postData._count.bids;
-  bid.textContent = `Current BID: ${bid.innerText}`;
+  bid.textContent = `Number of BIDS: ${bid.innerText}`;
 
   const button = document.createElement('button');
   button.classList.add('btn', 'btn-primary', 'mb-3');

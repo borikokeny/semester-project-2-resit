@@ -62,7 +62,7 @@ export async function renderSingleListingPage() {
   // endsAt.textContent = `Listing ends at ${endsAt.innerText}`;
 
   bids.innerHTML = listing._count.bids;
-  bids.textContent = `Current BID: ${bids.innerText}`;
+  bids.textContent = `Number of BIDs: ${bids.innerText}`;
   sellerAvatar.src = listing.avatar ?? `/images/img-placeholder.png`;
   sellerName.innerHTML = listing.seller.name;
   sellerEmail.innerHTML = listing.seller.email;

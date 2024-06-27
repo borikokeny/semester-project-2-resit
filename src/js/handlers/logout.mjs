@@ -4,7 +4,9 @@ export function setLogoutFormListener() {
   const logoutBtn = document.querySelectorAll('.sign-out');
   logoutBtn.forEach((lBtn) =>
   lBtn.addEventListener('click', () => {
-    logout()
+    logout();
+    //nem mukodik az atiranyitas
+    location.assign("/");
   }
   ))
 }
