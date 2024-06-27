@@ -12,6 +12,7 @@ export function setCreateListingFormListener() {
       const listing = Object.fromEntries(formData.entries())
   
       createListing(listing)
+      alert("Your listing was successfully added");
     })
   }
 }

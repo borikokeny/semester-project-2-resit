@@ -18,12 +18,11 @@ export function setRegisterFormListener() {
   
       try {
         await register( name, email, password, avatar );
-        
-        
         window.location.href = "../../../profile/login/index.html";
         // console.log("form");
         
       } catch {
+        alert("Profile already exists! Log in with this one or register a new profile!");
         console.error("error");
       }
     });
