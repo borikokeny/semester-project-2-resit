@@ -3,6 +3,7 @@ import * as listeners from "./handlers/index.mjs";
 import * as templates from "./templates/index.mjs";
 import * as listingMethods from "./api/listing/index.mjs";
 
+listeners.hidden()
 listeners.setRegisterFormListener()
 listeners.setLoginFormListener()
 listeners.setCreateListingFormListener()

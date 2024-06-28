@@ -15,7 +15,7 @@ switch (path) {
     break;  
   case '/':
     listeners.search()
-    listeners.setLogoutFormListener()
+    // listeners.setLogoutFormListener()
     break;  
   case '/create/':
     listeners.search()

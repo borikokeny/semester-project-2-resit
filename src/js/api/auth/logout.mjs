@@ -7,6 +7,7 @@ export function logout() {
     btn.addEventListener("click", () => {
       clear();
       alert("You are logged out");
+      location.assign("/");
     })
   );
 }

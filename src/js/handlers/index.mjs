@@ -7,3 +7,4 @@ export * from "./updateListing.mjs";
 export * from "./bidListing.mjs";
 export * from "./search.mjs";
 export * from "./setAvatar.mjs";
+export * from "./hidden.mjs";
