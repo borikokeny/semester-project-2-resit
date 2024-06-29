@@ -8,17 +8,11 @@ export function hidden() {
   for (const buttons of hiddenButtons) {
     const mustBeHidden = buttons.dataset.hidden;
 
-    // if (mustBeHidden === "registeredUser" && registeredUser) {
-    //   buttons.style.display = "block";
-    // } else {
-    //   buttons.style.display = "none";
-    // }
-
 
     if ((mustBeHidden === "registeredUser" && registeredUser)  || (mustBeHidden === "unregisteredUser" && !registeredUser)) {
-      buttons.style.display = "none";
-    } else {
       buttons.style.display = "block";
+    } else {
+      buttons.style.display = "none";
     }
   }
 }
