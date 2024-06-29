@@ -41,7 +41,7 @@ export async function renderSingleListingPage() {
     const minutesToDate = Math.floor((timeCounter % (1000 * 60 * 60)) / (1000 * 60));
     const hoursToDate = Math.floor((timeCounter % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const daysCount = Math.ceil(timeCounter / (1000 * 60 * 60 * 24));
-    console.log(daysCount);
+    // console.log(daysCount);
 
     endsAtDate.classList.add("mt-5");
 

@@ -29,8 +29,11 @@ switch (path) {
     listeners.setUpdateListingFormListener()
     break;
   case '/listing/':
+    
     templates.renderSingleListingPage()
+    listeners.search()
     listeners.bidListing()
+    
     break;
   case '/listings/':
     listeners.search()

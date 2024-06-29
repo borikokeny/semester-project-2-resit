@@ -15,7 +15,9 @@ import { headers } from "../headers.mjs";
       console.log(profile);
       return await response.json();
     } else {
+      alert("Profile already exists! Log in with this one or register a new profile!");
       throw new Error(response.statusText);
+
     }
   } catch (error) {
     throw new Error("Cannot fetch data");
