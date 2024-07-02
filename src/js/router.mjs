@@ -25,9 +25,9 @@ switch (path) {
     // listeners.setUpdateProfileListener()
     // listeners.setCreateListingFormListener()
     break;
-  case '/listing/edit/':
-    listeners.setUpdateListingFormListener()
-    break;
+  // case '/listing/edit/':
+  //   listeners.setUpdateListingFormListener()
+  //   break;
   case '/listing/':
     listeners.search()
     break;
