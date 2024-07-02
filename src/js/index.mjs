@@ -9,6 +9,8 @@ listeners.setLoginFormListener()
 listeners.setCreateListingFormListener()
 listeners.setUpdateProfileListener()
 templates.renderProfile()
+templates.renderSingleListingPage()   
+listeners.bidListing()
 
 async function listingsTemplate() {
   const listings = await listingMethods.viewListings();
