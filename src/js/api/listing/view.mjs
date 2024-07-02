@@ -20,6 +20,40 @@ export async function viewListings() {
   }  
 }
 
+export async function viewHighBidListings() {
+  try {
+    const response = await fetch(`${API_AUCTION_URL}${action}?_seller=true&_bids=true&sort=endsAt&sortOrder=desc&limit=3`, {
+      method: "GET",
+      headers: headers(),
+    });
+    
+    if (response.ok) {
+      return await response.json();
+    } else {
+      throw new Error(response.statusText);
+    }
+  } catch (error) {
+    throw new Error("Cannot fetch data");
+  } 
+}
+
+export async function endingSoonListings() {
+  try {
+    const response = await fetch(`${API_AUCTION_URL}${action}?_seller=true&_bids=true&sort=endsAt&sortOrder=asc&limit=3`, {
+      method: "GET",
+      headers: headers(),
+    });
+    
+    if (response.ok) {
+      return await response.json();
+    } else {
+      throw new Error(response.statusText);
+    }
+  } catch (error) {
+    throw new Error("Cannot fetch data");
+  } 
+}
+
 export async function viewListing(id) {
   if (!id) {
     throw new Error("Get needs a post ID")

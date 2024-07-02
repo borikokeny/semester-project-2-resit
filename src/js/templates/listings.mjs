@@ -45,3 +45,13 @@ export function renderListingTemplates(postDataList, parent) {
 
   //ez a kod rakja ki a listings/index.html oldalra a listingeket
 }
+export function renderFeaturesListingTemplates(postDataList, parent) {
+  parent.append(...postDataList.map(listingTemplate))
+
+  //ez a kod rakja ki a listings/index.html oldalra a listingeket
+}
+export function renderEndingSoonListingTemplates(postDataList, parent) {
+  parent.append(...postDataList.map(listingTemplate))
+
+  //ez a kod rakja ki a listings/index.html oldalra a listingeket
+}

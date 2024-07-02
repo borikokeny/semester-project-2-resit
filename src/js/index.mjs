@@ -20,3 +20,18 @@ async function listingsTemplate() {
 
 listingsTemplate()
 
+async function featureListing() {
+  const listingsa = await listingMethods.viewHighBidListings();
+  const containera = document.querySelector("#featureListing");
+  templates.renderFeaturesListingTemplates(listingsa, containera);
+}
+
+featureListing()
+
+async function endingSoonListing() {
+  const listingso = await listingMethods.endingSoonListings();
+  const containero = document.querySelector("#endingSoon");
+  templates.renderEndingSoonListingTemplates(listingso, containero);
+}
+
+endingSoonListing()
