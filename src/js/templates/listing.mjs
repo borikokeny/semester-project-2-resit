@@ -10,7 +10,6 @@ export async function renderSingleListingPage() {
 
   const img = document.querySelector("#listingImg");
   const title = document.querySelector("#listingTitle");
-  // const descriptionBox = document.querySelector("#descBox");
   const description = document.querySelector("#listingDescription");
   const endsAt = document.querySelector("#listingEndsAt");
   const bids = document.querySelector("#listingBids");
@@ -23,15 +22,10 @@ export async function renderSingleListingPage() {
   document.title = listing.title;
   img.src = listing.media[0] ?? `/images/img-placeholder.png`;
   title.innerHTML = listing.title;
-  // descriptionBox.style.inline-size = "150px"; 
-
   description.innerHTML = listing.description;
-  
 
   if(listing.endsAt) {
     const endsAtDate = document.querySelector("#listingEndsAt");
-
-    // const endsAtDate = document.createElement("p");
 
     const today = new Date();
     const timeLeft = new Date(listing.endsAt);
@@ -41,25 +35,13 @@ export async function renderSingleListingPage() {
     const minutesToDate = Math.floor((timeCounter % (1000 * 60 * 60)) / (1000 * 60));
     const hoursToDate = Math.floor((timeCounter % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const daysCount = Math.ceil(timeCounter / (1000 * 60 * 60 * 24));
-    // console.log(daysCount);
 
     endsAtDate.classList.add("mt-5");
 
     endsAtDate.innerText = `Closes in ${daysCount} days ${hoursToDate} hours ${minutesToDate} minutes ${secondsToDate} seconds`;
 
-    // if (timeCounter <= 0) {
-    //   clearInterval(counterInterval);
-    //   endsAtDate.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> Listing Ended`;
-    // }
-
     description.append(endsAtDate);
-
-
-
   }
-
-  // endsAt.innerHTML = listing.endsAt;
-  // endsAt.textContent = `Listing ends at ${endsAt.innerText}`;
 
   bids.innerHTML = listing._count.bids;
   bids.textContent = `Number of BIDs: ${bids.innerText}`;
@@ -67,24 +49,7 @@ export async function renderSingleListingPage() {
   sellerName.innerHTML = listing.seller.name;
   sellerEmail.innerHTML = listing.seller.email;
 
-  // const biddingList = listing.bids;
-
   if (listing.bids){
     renderBidderTemplate(listing.bids, biddersList);
   }
-
-  // const bidderInfo = biddingList.map((bidder) => {
-  // return `${bidder.bidderName} ${bidder.amount} ${bidder.created}`;
-  // });
-
-  // console.log(bidderInfo)
-
-
-  // bidderInfo.forEach(bidderItems => {
-   
-  //   const bidderCard = document.createElement("div");
-  //   bidderCard.innerHTML = bidderItems;
-
-  //   biddersList.append(bidderCard);
-  // });
 }

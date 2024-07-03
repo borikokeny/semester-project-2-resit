@@ -25,12 +25,4 @@ export async function login(email, password) {
   }
 
   throw new Error("Could not login");
-  
-  // const {accessToken, ...userProfile} = await response.json()
-
-  // storage.save("token", accessToken)
-
-  // storage.save("profile", userProfile)
-
-  // alert("You are now logged in")
 }

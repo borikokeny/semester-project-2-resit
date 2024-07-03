@@ -11,9 +11,3 @@ export function logout() {
     })
   );
 }
-
-
-// export function logout() {
-//   remove("profile");
-//   remove("token")
-// }

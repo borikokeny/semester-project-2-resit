@@ -1,6 +1,5 @@
 import { API_AUCTION_URL } from "../constants.mjs";
 import { headers } from "../headers.mjs";
-// import { authFetch } from "../authFetch.mjs";
 
 const action = "/profiles";
 const method = "put";

@@ -5,7 +5,6 @@ export function setCreateListingFormListener() {
   
   if (form) {
     form.addEventListener("submit", (event) => {
-      // console.log("f");
       event.preventDefault();
       const form = event.target;
       const formData = new FormData(form);

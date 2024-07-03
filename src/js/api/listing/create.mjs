@@ -1,5 +1,4 @@
 import { API_AUCTION_URL } from "../constants.mjs";
-// import { authFetch } from "../authFetch.mjs";
 import { headers } from "../headers.mjs";
 
 const action = "/listings";
@@ -20,8 +19,4 @@ export async function createListing(postData) {
   })
 
   return await response.json()
-
-  // const listing = await response.json();
-
-  // console.log(listing)
 }
