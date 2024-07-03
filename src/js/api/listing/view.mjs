@@ -39,7 +39,7 @@ export async function viewHighBidListings() {
 
 export async function endingSoonListings() {
   try {
-    const response = await fetch(`${API_AUCTION_URL}${action}?_seller=true&_bids=true&sort=endsAt&sortOrder=asc&limit=3`, {
+    const response = await fetch(`${API_AUCTION_URL}${action}?_seller=true&_bids=true&sort=tags&sortOrder=asc&limit=3`, {
       method: "GET",
       headers: headers(),
     });
