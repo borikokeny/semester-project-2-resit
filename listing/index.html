@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Listing</title>
-<!-- <link rel="stylesheet" href="/dist/css/styles.css" /> -->
   <link rel="stylesheet" href="/dist/css/index.css">
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
   <script type="module" src="/src/js/index.mjs" defer></script>
@@ -17,58 +16,35 @@
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="../images/Bidify_logo.jpg" alt="BIDWHIZ logo" class="bi me-2" role="img" width="192" height="71">
             </a>
-
             <form id="searchForm" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
               <input type="search" id="searchInput" class="form-control" placeholder="Search..." aria-label="Search">
             </form>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <!-- <li><a href="/" class="nav-link px-2 link-secondary">HOME</a></li> -->
               <li><a href="../../listings/" class="nav-link px-2 link-body-emphasis">Listings</a></li>
               <li><a href="../create/" class="nav-link px-2 link-body-emphasis" data-hidden="registeredUser">Add a Listing</a></li>
               <li><a href="../profile/" class="nav-link me-5 px-2 link-body-emphasis" data-hidden="registeredUser">My page</a></li>
               <li><div class="authLinks ms-0 mt-1">
-                <!-- <a class="nav-link px-2 link-body-emphasis" href="#">My page</a> -->
                 <a href="/profile/register/index.html"><button id="signUp" class="btn" data-hidden="unregisteredUser">Sign up</button></a>
                 <button id="logOut" data-hidden="registeredUser">Log out</button>
               </div></li>
             </ul>
             </div>
-
-            <!-- <div class="dropdown text-end">
-              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="../images/Profile-img-placeholder.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
-              </a>
-              <ul class="dropdown-menu text-small">
-                <li><a class="dropdown-item" href="../profile/register/">Create an Account</a></li>
-                <li><a class="dropdown-item" href="../profile/login/">Sign In</a></li>
-                <li><a class="dropdown-item" href="../profile/">Profile</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a id="logOut" class="dropdown-item sign-out" href="../profile/register/index.html">Sign out</a></li>
-              </ul>
-            </div> -->
           </div>
         </div>
       </div>
     </nav>
   </header>
-
   <section class="container">
-    <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3"> -->
       <div class="row">
       <div class="col-5">
         <div class="card shadow-sm" id="card">
           <img id="listingImg"/>
         </div>  
-
         <div class="row mt-4">
-          <!-- <h2 class="px-3">Listing owner</h2> -->
-
           <div class="col-2 m-2">
             <img src="/images/img-placeholder.png" id="sellerAvatar" class="img-fluid bd-placeholder-img" width="80rem"
             role="img">
@@ -77,11 +53,8 @@
             <strong><h3 id="sellerInfo" class="col"></h3></strong>
             <strong><p id="sellerEmail" class="col"></p></strong>
           </div>
-
         </div>
-
       </div>
-
           <div class="col-7 card-body">
             <div class="col px-3">
               <h1 id="listingTitle" class="mb-2"></h1>
@@ -90,7 +63,6 @@
               </div>
               <p id="listingEndsAt" class="mb-1 mt-5"></p>
               <div id="listingBids" class="bid-counter mb-3"></div>
-
               <div class="d-flex justify-content-between align-items-center">
                 <form id="addBid" class="container form-floating mb-3">
                   <div class="row form-group mb-0">
@@ -100,28 +72,19 @@
                   </div>
                 </form>
               </div>
-
             </div>
             <div id="bidsContainer" class="ms-3" data-hidden="registeredUser">
               <hr class="mb-4">
               <h3>Bidding history</h3>
               <p id="bidderName"></p>
-
               <hr class="my-4">
-            </div>
-    
+            </div>    
           </div>
         </div>
       </div>
-    </div>
-  
-</div>
-
-  </section>
- 
-      </div> 
-    </div>
+    </div> 
   </div>
+  </section> 
   <div id="searchResult" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm"></div>
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

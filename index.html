@@ -6,16 +6,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" type="text/css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="/dist/css/styles.css" /> -->
   <title>Home Page</title>
   <link rel="stylesheet" href="/dist/css/index.css"/>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
   <script type="module" defer src="/src/js/index.mjs"></script>
   <script type="module" defer src="/src/js/router.mjs"></script>
-
-
- 
-
 </head>
 <body>
   <header class="p-3 mb-3 border-bottom">
@@ -26,100 +21,43 @@
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
               <img src="/images/Bidify_logo.jpg" alt="BIDIFY logo" class="bi me-3" role="img" width="192" height="71">
             </a>
-
             <form id="searchForm" class="col-12 col-lg-auto ps-5 ms-5 mb-3 mb-lg-0 me-lg-3" role="search">
               <input type="search" id="searchInput" class="form-control" placeholder="Search..." aria-label="Search">
             </form>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-between mb-md-0">
-              <!-- <li><a href="/" class="nav-link px-2 link-secondary">HOME</a></li> -->
               <li><a href="./listings/" class="nav-link px-2 ms-5 ps-3 link-body-emphasis">Listings</a></li>
               <li><a href="./create/" id="createPage" class="nav-link px-2 ms-3 link-body-emphasis" data-hidden="registeredUser">Add a Listing</a></li>
               <li><a href="/profile/" id="myPage" class="nav-link me-5 ms-3 px-2 link-body-emphasis" data-hidden="registeredUser" >My page</a></li>
               <li><div class="authLinks ps-5 ms-5 mt-1">
-                <!-- <a class="nav-link px-2 link-body-emphasis" href="#">My page</a> -->
-               
                 <a href="/profile/register/index.html" id="signUp" class="ms-5 mt-2" data-hidden="unregisteredUser">Sign up</a>
-                 <!-- style="display: none" -->
                 <button id="logOut" class="btn" data-hidden="registeredUser">Log out</button>
-
-
               </div></li>
-              <!-- <li><a href="#" class="nav-link px-2 link-body-emphasis">Create an Account</a></li> -->
             </ul>
             </div>
-
-            <!-- <form id="searchForm" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <input id="search" type="search" class="form-control" placeholder="Search..." aria-label="Search">
-            </form> -->
-    
-            <!-- <div class="dropdown text-end">
-              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                <img id="avatar" src="/images/Profile-img-placeholder.jpg" alt="avatar" width="32" height="32" class="rounded-circle">
-              </a>
-              <ul class="dropdown-menu text-small">
-                <li><a class="dropdown-item" href="./profile/register/">Create an Account</a></li>
-                <li><a class="dropdown-item" href="./profile/login/">Sign In</a></li>
-                <li><a class="dropdown-item" href="./profile/">Profile Page</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item sign-out" href="./index.html">Sign out</a></li>
-              </ul>
-            </div> -->
           </div>
         </div>
       </div>
     </nav>
   </header>
-
-
-
   <div class="container col-xxl-8 px-2">
     <div class="row flex-lg-row align-items-center g-5 py-3">
       <div class="col-3 ">
         <img src="/images/Dob_1.jpg" class="d-block mx-lg-auto img-fluid" width="auto">
       </div>
-
       <div class="col-3">
         <div class="row">
           <img src="/images/Group 9.jpg" class="mt-1">
         </div>
-        <!-- <div class="row position-relative">
-          <a href="/profile/register/">
-            <button class="btn position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill">Sign in</button>
-          </a> 
-        </div> -->
       </div>
       <div class="col-6">
         <img src="/images/Small_hero.jpg" class="d-block mx-lg-auto img-fluid" width="auto" height="500">
       </div>
     </div>
-
-    <!-- <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="img-wrapper position-relative col-12 col-sm-12 col-lg-12">
-        <img src="/images/Group 7.png" class="img-responsive d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="1200" height="500" loading="lazy">
-        <div class="img-overlay position-absolute top-50 start-50">
-          <button class="btn top-50 start-50">Sign in</button>
-        </div>
-      </div> -->
-
-
-
-      <!-- <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Welcome to the BIDWHIZ Auction site</h1>
-        <p class="lead mb-5">BIDWHIZ is the leading auction marketplace for special objects, selected by experts. Every day, in-house experts select special objects to auction across 22 categories. 10 Million Visitors. Seamless Buying & Selling. 60+ Markets. Weekly Online Auctions.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a href="/listings/"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">View Our Listings</button></a>
-          <a href="/profile/"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Create a Listing</button></a>
-        </div>
-      </div> -->
   </div>
-
-
-
   <div class="album py-5 bg-body-tertiary">
     <div class="container">
       <div id="searchResult" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm"></div>
@@ -127,16 +65,11 @@
         <h1>Featured Listings</h1>
         <div id="featureListing" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm"></div>
       </div>
-
         <div class="row">
           <h1>Editors Choise</h1>
           <div id="endingSoon" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm"> 
           </div>
         </div>
-
-    
-
-
       <!-- <div id="listings" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm"></div> -->
     </div>
   </div>

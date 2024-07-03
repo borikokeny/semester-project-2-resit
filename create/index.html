@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add a Listing</title>
-<!-- <link rel="stylesheet" href="/dist/css/styles.css" /> -->
   <link rel="stylesheet" href="/dist/css/index.css">
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
   <script type="module" src="/src/js/index.mjs" defer></script>
@@ -17,15 +16,12 @@
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="../images/Bidify_logo.jpg" alt="BIDWHIZ logo" class="bi me-3" role="img" width="192" height="71">
             </a>
-
             <form id="searchForm" class="col-12 col-lg-auto ps-5 ms-5 mb-3 mb-lg-0 me-lg-3" role="search">
               <input id="searchInput" type="search" class="form-control" placeholder="Search..." aria-label="Search">
             </form>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li><a href="../../listings/" class="nav-link px-2 ms-5 ps-3 link-body-emphasis">Listings</a></li>
@@ -45,47 +41,35 @@
   <section class="container">
     <div class="row">
      <div class="col-6">
-       <!-- <div class="modal-content rounded-4 shadow"> -->
-
       <div class="modal-header p-5 pb-4 border-bottom-0">
         <h1 class="fw-bold mb-0 fs-2">Create a Listing</h1>
       </div>
-
       <div class="modal-body p-5 pt-0">
-
         <form class="" id="createListing">
-
           <div class="form-floating mb-3">
             <input type="text" name="title" required maxlength="280" class="form-control" id="floatingInput" placeholder="title">
             <label for="floatingInput">Title</label>
           </div>
-
           <div class="form-floating mb-3">
             <textarea type="text" name="description" class="form-control" nullable="true" required maxlength="280"></textarea>
             <label for="floatingInput">Description</label>
           </div>
-
           <div class="form-group mb-3">
             <label for="">Ends At</label>
             <input class="form-control" type="datetime-local" name="endsAt" required></input>
           </div>
-
           <div class="form-group mb-3">
             <label for="">Media</label>
             <input class="form-control" type="url" name="media">
           </div>
-
           <button class="w-100 mb-2 btn btn-lg btn-primary" type="submit">Send Listing</button>
-
         </form>
       </div>
       </section>
       <hr class="my-4">
-
       </div> 
     </div>
   </div>
- 
   <div id="searchResult" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm"></div>
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
