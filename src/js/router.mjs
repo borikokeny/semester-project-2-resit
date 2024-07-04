@@ -1,32 +1,26 @@
 import * as listeners from "./handlers/index.mjs";
 import * as templates from "./templates/index.mjs";
 import * as listingMethods from "./api/listing/index.mjs";
+import { logout } from "./api/auth/logout.mjs";
 
 const path = location.pathname;
-
+logout()
 switch (path) {
   case '/profile/login/':
     listeners.setLoginFormListener()
     break;
   case '/profile/register/':
-    listeners.setRegisterFormListener()
     break;  
   case '/':
     listeners.search()
-    listeners.setLogoutFormListener()
     break;  
+  case '/create/':
+    listeners.search()
   case '/profile/':
     listeners.search()
-    templates.renderProfile()
-    listeners.setUpdateProfileListener()
-    listeners.setCreateListingFormListener()
-    break;
-  case '/listing/edit/':
-    listeners.setUpdateListingFormListener()
     break;
   case '/listing/':
-    templates.renderSingleListingPage()
-    listeners.bidListing()
+    listeners.search()
     break;
   case '/listings/':
     listeners.search()

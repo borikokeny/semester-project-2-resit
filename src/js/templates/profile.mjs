@@ -7,13 +7,17 @@ export async function renderProfile() {
 
   const profileImage = document.querySelector("#profileImage");
   const credit = document.querySelector("#credit");
+  const userName = document.querySelector("#userName");
+  const userEmail = document.querySelector("#userEmail");
 
+  userName.value = profile.name;
+  userEmail.value = profile.email;
   credit.innerText = profile.credits;
 
   if (profile.avatar) {
     profileImage.src = profile.avatar;
     profileImage.style.objectFit = "cover";
   } else {
-    profileImage.src = "/images/Canon_eos.jpg";
+    profileImage.src = "/images/Profile-img-placeholder.jpg";
   }
 }

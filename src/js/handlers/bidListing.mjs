@@ -1,5 +1,4 @@
 import { addABid } from "../api/listing/bids.mjs";
-import { viewListing } from "../api/listing/view.mjs";
 import { load } from "../storage/index.mjs";
 
 export function bidListing() {

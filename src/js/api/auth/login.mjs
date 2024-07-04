@@ -1,25 +1,28 @@
 import { API_AUCTION_URL } from "../constants.mjs";
-import * as storage from "../../storage/index.mjs";
+import { save } from "../../storage/index.mjs";
+import { headers } from "../headers.mjs";
 
 const action = "/auth/login";
-const method = "post";
+const method = "POST";
 
-export async function login(profile) {
+export async function login(email, password) {
   const loginURL = API_AUCTION_URL + action;
- 
+  console.log("ssss");
   const response = await fetch(loginURL, {
-    headers: {
-      "Content-Type": "application/json"
-    },
+    headers: headers(),
     method,
-    body: JSON.stringify(profile)
-  })
-  
-  const {accessToken, ...userProfile} = await response.json()
+    body: JSON.stringify({email, password}),
+  });
 
-  storage.save("token", accessToken)
+  if (response.ok) {
+    const { accessToken, ...profile } = (await response.json());
+    save("token", accessToken);
+    save("profile", profile);
 
-  storage.save("profile", userProfile)
+    alert("You are now logged in");
 
-  alert("You are now logged in")
+    return profile;
+  }
+
+  throw new Error("Could not login");
 }

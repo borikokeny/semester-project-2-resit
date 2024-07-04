@@ -2,7 +2,7 @@ import { createListing } from "../api/listing/index.mjs";
 
 export function setCreateListingFormListener() {
   const form = document.querySelector("#createListing");
-
+  
   if (form) {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -11,6 +11,7 @@ export function setCreateListingFormListener() {
       const listing = Object.fromEntries(formData.entries())
   
       createListing(listing)
+      alert("Your listing was successfully added");
     })
   }
 }

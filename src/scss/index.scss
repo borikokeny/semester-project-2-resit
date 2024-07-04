@@ -3,6 +3,64 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+@font-face {
+  font-family: "Outfit", sans-serif;
+  src: url(https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap);
+}
+
+body {
+  font-family: "Outfit";
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+// .outfit-<uniquifier> {
+//   font-family: "Outfit", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal;
+// }
+
+
 .bg-body-tertiary {
   --bs-bg-opacity: 0;
+}
+
+.form-control {
+  --#{$prefix}border-radius: 0%;
+}
+
+.btn {
+  --#{$prefix}btn-border-radius: 0%;
+  --bs-btn-bg: #fbb615;
+}
+
+.card {
+  --bs-card-border-width: 0%;
+}
+
+.shadow-sm {
+  --bs-box-shadow-sm: 0%;
+}
+
+.card-img-top {
+  --bs-card-inner-border-radius: 0%;  
+}
+
+#descBox {
+  inline-size: 400px;
+  overflow-wrap: break-word;
+}
+
+//  a:visited {
+//   color: yellow;
+// }
+
+.active {
+  font-weight: bold;
 }
