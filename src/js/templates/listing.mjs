@@ -22,6 +22,8 @@ export async function renderSingleListingPage() {
   document.title = listing.title;
   img.src = listing.media[0] ?? `/images/img-placeholder.png`;
   title.innerHTML = listing.title;
+  title.classList.add("text-wrap");
+  // description.style.color = "blue";
   description.innerHTML = listing.description;
 
   if(listing.endsAt) {
