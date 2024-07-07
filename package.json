@@ -22,7 +22,7 @@
   "homepage": "https://github.com/borikokeny/semester-project-2-resit#readme",
   "devDependencies": {
     "live-server": "^1.2.2",
-    "sass": "^1.77.4"
+    "sass": "^1.77.6"
   },
   "dependencies": {
     "bootstrap": "^5.3.3"
