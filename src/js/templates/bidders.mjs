@@ -1,6 +1,6 @@
 function bidderTemplate(bids) {
   const table = document.createElement("div");
-  table.classList.add("row", "border-bottom");
+  table.classList.add("row", "border-bottom", "me-0");
 
   const name = document.createElement("h6");
   name.classList.add("col", "mt-3");
