@@ -9,7 +9,7 @@ export async function search() {
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const searchValue = search.value.trim();
+      const searchValue = search.value.trim().toLowerCase();
 
       if (searchValue === "") {
         searchResults([]);
