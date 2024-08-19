@@ -15,8 +15,9 @@ export function bidListing() {
       const isLogedIn = load("profile");
 
     
-        if (isLogedIn) {
-          await addABid(+value, id);
+      if (isLogedIn) {
+        await addABid(+value, id);
+        window.location.href = "";
       } else {
         return Error;
       } 
