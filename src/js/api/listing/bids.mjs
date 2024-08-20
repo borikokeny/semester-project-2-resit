@@ -2,7 +2,6 @@ import { API_AUCTION_URL } from "../constants.mjs";
 import { headers } from "../headers.mjs";
 
 const action = "/listings";
-const method = "post";
 
 export async function addABid(bid, id) {
   try {
@@ -13,7 +12,7 @@ export async function addABid(bid, id) {
     const addABidUrl = `${API_AUCTION_URL}${action}/${id}/bids`;
 
     const response = await fetch(addABidUrl, {
-      method,
+      method: "POST",
       headers: headers(),
       body: JSON.stringify({ amount: bid }),
     });

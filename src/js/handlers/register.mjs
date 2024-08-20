@@ -5,16 +5,16 @@ export function setRegisterFormListener() {
   
   if(form) {
     form.addEventListener("submit", async (event) => {
-    
-      event.preventDefault();
-    
+      event.preventDefault()
       const form = event.target;
       const formData = new FormData(form);
       const { name, email, password, avatar } = Object.fromEntries(formData.entries());
   
       try {
         await register( name, email, password, avatar );
-        location.assign("/profile/login/index.html");
+        // location.assign("/profile/login");
+      //  location.assign("/login");
+      window.location.href = "../../../profile/login/index.html";
       } catch {
         console.error("error");
       }
