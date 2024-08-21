@@ -1,5 +1,6 @@
-Semester Project 2 CA - Bidwhiz Auction Site
-![Bidwhiz-site](https://github.com/borikokeny/semester-project-2-ca/assets/95857961/d11121b5-c0cd-4169-939a-eb6a485ac9f9)
+Semester Project 2 - Bidify Auction Site
+![Screenshot-Bidify](https://github.com/user-attachments/assets/e61a9bb8-7f0f-4f24-9668-47bbf8a4e3c8)
+
 # Description
 
 An auction site is looking to launch a website where users can add items to be bid on and bid on items other users have put up for auction.
@@ -21,7 +22,7 @@ An unregistered user may search through Listings
 ## Built with 
 
 - Javascript (ECMAScript 2023)
-- bootstrap@5.3.2
+- bootstrap@5.3.3
 - Noroff auction API
 - HTML5
 - CSS3
@@ -30,16 +31,20 @@ An unregistered user may search through Listings
   <tbody>
     <tr>
       <th>Hosted Demo</th>
-      <td><a href="https://bidwhiz-auction.netlify.app/">Gantt Chart link</a></td>
+      <td><a href="https://bidify-auction.netlify.app/">Netlify DEMO</a></td>
     </tr>
     <tr>
-      <th>Design Prototype</th>
-      <td><a href="https://xd.adobe.com/view/de88bb8b-c010-41ae-ab05-7d01a5e91171-8bdb/">Desktop Prototype</a> </br>
+      <th>Style Guide & Design Prototype</th>
+      <td><a href="https://xd.adobe.com/view/4f029387-354e-4ee1-b318-bbda63564665-1a51/">Adobe XD</a> </br>
       </td>
     </tr>
     <tr>
+      <th>Gantt Chart</th>
+      <td><a href="https://github.com/users/borikokeny/projects/8/views/1?layout=roadmap">Project Roadmap</a></td>
+    </tr>
+    <tr>
       <th>Kanban Board</th>
-      <td><a href="https://trello.com/b/99CRx6yZ/semester-project-2">Project Board Link</a></td>
+      <td><a href="https://github.com/users/borikokeny/projects/8/views/1">Project Board</a></td>
     </tr>
   </tbody>
 </table>
