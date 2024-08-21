@@ -8,6 +8,7 @@ export function listingTemplate(postData) {
 
   const listingCard = document.createElement('div');
   listingCard.classList.add('card');
+  listingCard.classList.add('text-center');
   listing.append(listingCard)
 
   const img = document.createElement('img');
