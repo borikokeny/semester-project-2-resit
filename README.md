@@ -8,16 +8,16 @@ An auction site is looking to launch a website where users can add items to be b
 When a new user joins the website, they are given 1000 credits to use on the site. They can get credits by selling items and use credit by buying items. Non-registered users can search through the listings, but only registered users can make bids on listings.
 
 ## Requirements
+- A user with a stud.noroff.no email may register
+- A registered user may login
+- A registered user may logout
+- A registered user may update their avatar
+- A registered user may view their total credit
+- A registered user may create a Listing with a title, deadline date, media gallery and description
+- A registered user may add a Bid to another user’s Listing
+- A registered user may view Bids made on a Listing
+- An unregistered user may search through Listings
 
-A user with a stud.noroff.no email may register
-A registered user may login
-A registered user may logout
-A registered user may update their avatar
-A registered user may view their total credit
-A registered user may create a Listing with a title, deadline date, media gallery and description
-A registered user may add a Bid to another user’s Listing
-A registered user may view Bids made on a Listing
-An unregistered user may search through Listings
 
 ## Built with 
 
@@ -35,8 +35,7 @@ An unregistered user may search through Listings
     </tr>
     <tr>
       <th>Style Guide & Design Prototype</th>
-      <td><a href="https://xd.adobe.com/view/4f029387-354e-4ee1-b318-bbda63564665-1a51/">Adobe XD</a> </br>
-      </td>
+      <td><a href="https://xd.adobe.com/view/4f029387-354e-4ee1-b318-bbda63564665-1a51/">Adobe XD</a></td>
     </tr>
     <tr>
       <th>Gantt Chart</th>
