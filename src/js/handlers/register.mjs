@@ -12,11 +12,9 @@ export function setRegisterFormListener() {
   
       try {
         await register( name, email, password, avatar );
-        // location.assign("/profile/login");
-      //  location.assign("/login");
       window.location.href = "../../../profile/login/index.html";
-      } catch {
-        console.error("error");
+      } catch (e) {
+        console.error(e);
       }
     });
   }

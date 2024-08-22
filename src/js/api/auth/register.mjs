@@ -11,7 +11,6 @@ import { headers } from "../headers.mjs";
   
     if (response.ok) {
       alert("You are now registered");
-      console.log(profile);
       return await response.json();
     } else {
       alert("Profile already exists! Log in with this one or register a new profile!");
