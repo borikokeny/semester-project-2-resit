@@ -45,5 +45,9 @@ When a new user joins the website, they are given 1000 credits to use on the sit
       <th>Kanban Board</th>
       <td><a href="https://github.com/users/borikokeny/projects/8/views/1">Project Board</a></td>
     </tr>
+    <tr>
+      <th>Repository</th>
+      <td><a href="https://github.com/borikokeny/semester-project-2-resit">Repository</a></td>
+    </tr>
   </tbody>
 </table>
