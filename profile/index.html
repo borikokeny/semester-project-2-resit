@@ -1,104 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIDIFY | Profile Page</title>
-  <meta name="description" content="Check your credits and update your avatar on Bidify!"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="stylesheet" href="/dist/css/index.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" type="text/css">
-  <script type="module" defer src="/src/js/index.mjs"></script>
-  <script type="module" defer src="/src/js/router.mjs"></script>
-</head>
-<body>
-  <header class="p-3 mb-3 border-bottom">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"><img src="../images/Bidify_logo.jpg" alt="BIDWHIZ logo" class="bi me-3" role="img" width="192" height="71">
-            </a>
-            <form id="searchForm" class="col-12 col-lg-auto ps-lg-5 ms-lg-5 mb-3 mb-lg-0 me-lg-3" role="search">
-              <input id="searchInput" type="search" class="form-control" placeholder="Search..." aria-label="Search">
-            </form>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav col-12 col-xl-auto me-lg-auto mb-2 mt-lg-2 mt-xl-0 justify-content-between mb-md-0">
-                <li><a href="../listings/" class="nav-link px-2 ms-0 ms-lg-0 ms-xl-5 ps-lg-1 link-body-emphasis">Listings</a></li>
-                <li><a href="../create/" class="nav-link px-2 ms-3 link-body-emphasis" data-hidden="registeredUser">Add a Listing</a></li>
-                <li><a href="../profile/" class="nav-link active me-5 ms-3 px-2 link-body-emphasis" data-hidden="registeredUser">My page</a></li>
-              <li><div class="authLinks ps-5 ms-5 mt-2">
-                <a href="/profile/register/index.html"><button id="signUp" class="btn" data-hidden="unregisteredUser">Sign up</button></a>
-                <a href="/profile/login/" id="logOut" type="submit" data-hidden="registeredUser">Log out</a>
-              </div></li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIDIFY | Profile Page</title>
+    <meta
+      name="description"
+      content="Check your credits and update your avatar on Bidify!"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/dist/css/index.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="module" defer src="/src/js/index.mjs"></script>
+    <script type="module" defer src="/src/js/router.mjs"></script>
+  </head>
+  <body>
+    <header class="p-3 mb-3 border-bottom">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <div class="container">
+            <div
+              class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+            >
+              <a
+                href="/"
+                class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"
+                ><img
+                  src="../images/Bidify_logo.jpg"
+                  alt="BIDWHIZ logo"
+                  class="bi me-3"
+                  role="img"
+                  width="192"
+                  height="71"
+                />
+              </a>
+              <form
+                id="searchForm"
+                class="col-12 col-lg-auto ps-lg-5 ms-lg-5 mb-3 mb-lg-0 me-lg-3"
+                role="search"
+              >
+                <input
+                  id="searchInput"
+                  type="search"
+                  class="form-control"
+                  placeholder="Search..."
+                  aria-label="Search"
+                />
+              </form>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul
+                  class="nav col-12 col-xl-auto me-lg-auto mb-2 mt-lg-2 mt-xl-0 justify-content-between mb-md-0"
+                >
+                  <li>
+                    <a
+                      href="../listings/"
+                      class="nav-link px-2 ms-0 ms-lg-0 ms-xl-5 ps-lg-1 link-body-emphasis"
+                      >Listings</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../create/"
+                      class="nav-link px-2 ms-3 link-body-emphasis"
+                      data-hidden="registeredUser"
+                      >Add a Listing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../profile/"
+                      class="nav-link active me-5 ms-3 px-2 link-body-emphasis"
+                      ="registeredUser"
+                      >My page</a
+                    >
+                  </li>
+                  <li>
+                    <div class="authLinks ps-5 ms-5 mt-2">
+                      <a href="/profile/register/index.html"
+                        ><button
+                          id="signUp"
+                          class="btn"
+                          data-hidden="unregisteredUser"
+                        >
+                          Sign up
+                        </button></a
+                      >
+                      <a
+                        href="/profile/login/"
+                        id="logOut"
+                        type="submit"
+                        data-hidden="registeredUser"
+                        >Log out</a
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </header>
-  <section class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="container mt-4">
-          <div class="row">
-            <div class="col-12 col-lg-6">
-                <img src="/images/img-placeholder.png" id="profileImage" class="img-fluid bd-placeholder-img " role="img" width="400" height="140"/>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="container mt-4">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <img
+                  src="/images/img-placeholder.png"
+                  id="profileImage"
+                  class="img-fluid bd-placeholder-img"
+                  role="img"
+                  width="400"
+                  height="140"
+                />
                 <form id="editProfile" class="mb-3">
-                <div class="form-group mb-3">
-                  <label class="ps-1 mt-3 mb-1">Update your avatar</label>
+                  <div class="form-group mb-3">
+                    <label class="ps-1 mt-3 mb-1">Update your avatar</label>
                     <div class="container">
                       <div class="row">
-                        <input class="col-8 form-control" type="url" name="avatar" placeholder="Avatar url">
-                        <button class="col-8 col-lg-4 btn btn-primary mt-4" href="#">Update</button>
+                        <input
+                          class="col-8 form-control"
+                          type="url"
+                          name="avatar"
+                          placeholder="Avatar url"
+                        />
+                        <button
+                          class="col-8 col-lg-4 btn btn-primary mt-4"
+                          href="#"
+                        >
+                          Update
+                        </button>
                       </div>
                     </div>
-                </div>
-              </form>
-            </div>
-            <div class="col-12 col-lg-6">
-              <form id="editProfile" class="mb-3">
-                <div class="form-group mb-1">
-                  <label class="mb-1">Name</label>
-                  <input id="userName" class="form-control" type="text" name="name" disabled>
-                </div>
-                <div class="form-group mb-1">
-                  <label class="mb-1">Email</label>
-                  <input id="userEmail" class="form-control mb-2" type="text" name="email" disabled>
-                </div>
-                <div class="form-group mb-1 mt-3">
-                  <ul class="list-group mb-3">
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                      <div>
-                        <h6 class="ps-0 my-0">My Credits</h6>
-                      </div>
-                      <span id="credit" class="text-body-secondary fw-bold ms-2"></span>
-                    </li>
-                  </ul>
-                </div>
-              </form>
+                  </div>
+                </form>
+              </div>
+              <div class="col-12 col-lg-6">
+                <form id="editProfile" class="mb-3">
+                  <div class="form-group mb-1">
+                    <label class="mb-1">Name</label>
+                    <input
+                      id="userName"
+                      class="form-control"
+                      type="text"
+                      name="name"
+                      disabled
+                    />
+                  </div>
+                  <div class="form-group mb-1">
+                    <label class="mb-1">Email</label>
+                    <input
+                      id="userEmail"
+                      class="form-control mb-2"
+                      type="text"
+                      name="email"
+                      disabled
+                    />
+                  </div>
+                  <div class="form-group mb-1 mt-3">
+                    <ul class="list-group mb-3">
+                      <li
+                        class="list-group-item d-flex justify-content-between lh-sm"
+                      >
+                        <div>
+                          <h6 class="ps-0 my-0">My Credits</h6>
+                        </div>
+                        <span
+                          id="credit"
+                          class="text-body-secondary fw-bold ms-2"
+                        ></span>
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>  
-  </section>
-  <hr class="my-4">
-  <div id="searchResult" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm ms-5 ps-5"></div>
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 BIDWHIZ, Inc</span>
-      </div>
-    </footer>
-  </div>
-</body>
+    </section>
+    <hr class="my-4" />
+    <div
+      id="searchResult"
+      class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 shadow-sm ms-5 ps-5"
+    ></div>
+    <div class="container">
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-body-secondary"
+            >© 2024 BIDIFY - Bori Kokeny</span
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
