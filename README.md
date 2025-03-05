@@ -27,6 +27,36 @@ When a new user joins the website, they are given 1000 credits to use on the sit
 - HTML5
 - CSS3
 
+## Installing
+```sh
+Clone the repo:
+git https://github.com/borikokeny/semester-project-2-resit.git
+```
+### Install the dependencies:
+```sh
+npm install
+```
+### Build
+```sh
+npm run build
+```
+### Running
+To run the app, run the following commands:
+```sh
+npm run start
+```
+## Contributing
+If you want to contribute to the project and make it better, your help is very welcome.
+
+## Contact Information
+You can contact me:
+
+<a href="https://www.linkedin.com/in/bori-kokeny-7070008a/">My LinkedIn page</a>
+
+Or you can e-mail me:
+
+bori@minerali.hu
+
 <table>
   <tbody>
     <tr>
