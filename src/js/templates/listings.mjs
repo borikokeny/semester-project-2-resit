@@ -16,7 +16,8 @@ export function listingTemplate(postData) {
   img.style.width = "100%";
   img.style.height = "15rem";
   img.style.objectFit = "cover";
-  img.src = postData.media[0] ?? `/images/img-placeholder.png`;
+  // img.src = postData.media[0] ?? `/images/img-placeholder.png`;
+  img.src = postData.media?.[0]?.url || `/images/img-placeholder.png`;
   img.alt = postData.title; 
 
   const listingBody = document.createElement("div");
@@ -36,10 +37,8 @@ export function listingTemplate(postData) {
 
   listingCard.append(img, listingBody);
   listingBody.append(title, bid, button);
-
   return listing;
 }
-
 
 export function renderListingTemplates(postDataList, parent) {
   parent.append(...postDataList.map(listingTemplate))

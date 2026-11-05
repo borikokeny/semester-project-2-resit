@@ -1,9 +1,9 @@
-import { API_AUCTION_URL } from "../constants.mjs";
+import { API_HOST_URL } from "../constants.mjs";
 import { save } from "../../storage/index.mjs";
 import { headers } from "../headers.mjs";
 
 export async function login(email, password) {
-  const response = await fetch(`${API_AUCTION_URL}/auth/login`, {
+  const response = await fetch(`${API_HOST_URL}/auth/login`, {
     headers: headers(),
     method: "POST",
     body: JSON.stringify({email, password}),

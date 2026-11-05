@@ -1,33 +1,44 @@
-import { viewProfile, updateProfile } from "../api/profile/index.mjs"
+import { viewProfile, updateProfile } from "../api/profile/index.mjs";
 import { load } from "../storage/index.mjs";
 
 export async function setUpdateProfileListener() {
   const form = document.querySelector("#editProfile");
 
-  if (form) {
-    const { name, email } = load("profile");
-    form.name = name;
-    form.email= email;
+  if (!form) return;
 
-    const button = form.querySelector("button");
-    const profile = await viewProfile(name);
-    form.avatar.src = profile.avatar;
+  const savedProfile = load("profile");
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault()
-      const form = event.target;
-      const formData = new FormData(form);  
-      const profile = Object.fromEntries(formData.entries())
+  if (!savedProfile?.name) {
+    console.log("No logged-in profile found");
+    return;
+  }
 
-      profile.name = name;
-      profile.email = email;
+  const { name, email } = savedProfile;
 
-      try {
-        await updateProfile(profile);
-        window.location.href = "";
-      } catch {
-        console.log("error");
-      }
-      });
+  form.name.value = name;
+  form.email.value = email;
+
+  const profile = await viewProfile(name);
+
+  if (form.avatar) {
+    form.avatar.src =
+      profile.avatar?.url || "/images/Profile-img-placeholder.jpg";
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const updatedProfile = Object.fromEntries(formData.entries());
+
+    updatedProfile.name = name;
+    updatedProfile.email = email;
+
+    try {
+      await updateProfile(updatedProfile);
+      window.location.reload();
+    } catch (error) {
+      console.error("Profile update failed:", error);
     }
+  });
 }
