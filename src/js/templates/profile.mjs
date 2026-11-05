@@ -3,28 +3,34 @@ import { load } from "../storage/index.mjs";
 
 export async function renderProfile() {
   const savedProfile = load("profile");
+  const profileData = savedProfile?.data || savedProfile;
 
-  // Stop if no user is logged in
-  if (!savedProfile?.name) {
+  console.log("Saved profile:", savedProfile);
+
+  if (!profileData?.name) {
     console.log("No logged-in profile found");
     return;
   }
 
-  const profile = await viewProfile(savedProfile.name);
+  try {
+    const profile = await viewProfile(profileData.name);
 
-  const profileImage = document.querySelector("#profileImage");
-  const credit = document.querySelector("#credit");
-  const userName = document.querySelector("#userName");
-  const userEmail = document.querySelector("#userEmail");
+    console.log("Profile received from API:", profile);
 
-  if (userName) userName.value = profile.name;
-  if (userEmail) userEmail.value = profile.email;
-  if (credit) credit.innerText = profile.credits;
+    const profileImage = document.querySelector("#profileImage");
+    const credit = document.querySelector("#credit");
+    const userName = document.querySelector("#userName");
+    const userEmail = document.querySelector("#userEmail");
 
-  if (profileImage) {
-    profileImage.src =
-      profile.avatar?.url || "/images/Profile-img-placeholder.jpg";
+    if (userName) userName.value = profile.name;
+    if (userEmail) userEmail.value = profile.email;
+    if (credit) credit.innerText = profile.credits;
 
-    profileImage.style.objectFit = "cover";
+    if (profileImage) {
+      profileImage.src =
+        profile.avatar?.url || "/images/Profile-img-placeholder.jpg";
+    }
+  } catch (error) {
+    console.error("Profile loading failed:", error);
   }
 }

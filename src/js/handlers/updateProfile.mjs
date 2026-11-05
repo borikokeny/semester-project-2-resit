@@ -15,8 +15,8 @@ export async function setUpdateProfileListener() {
 
   const { name, email } = savedProfile;
 
-  form.name.value = name;
-  form.email.value = email;
+  // form.name.value = name;
+  // form.email.value = email;
 
   const profile = await viewProfile(name);
 

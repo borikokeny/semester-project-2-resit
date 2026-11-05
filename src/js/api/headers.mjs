@@ -2,17 +2,15 @@ import { load } from "../storage/index.mjs";
 
 export function headers() {
   const token = load("token");
+  const apiKey = load("apiKey");
 
-  if (token) {
-    return {
-      "Content-Type": "application/json",
+  return {
+    "Content-Type": "application/json",
+    ...(token && {
       Authorization: `Bearer ${token}`,
-    };
-   
-  } else {
-    return {
-      "Content-Type": "application/json",
-    };
-  }
-
+    }),
+    ...(apiKey && {
+      "X-Noroff-API-Key": apiKey,
+    }),
+  };
 }
