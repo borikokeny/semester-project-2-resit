@@ -20,7 +20,8 @@ export async function renderSingleListingPage() {
   const biddersList = document.querySelector("#bidderName");
 
   document.title = listing.title;
-  img.src = listing.media[0] ?? `/images/img-placeholder.png`;
+  img.src = listing.media?.[0]?.url || "/images/img-placeholder.png";
+  img.alt = listing.media?.[0]?.alt || listing.title; 
   title.innerHTML = listing.title;
   title.classList.add("text-wrap");
   description.innerHTML = listing.description;
@@ -46,7 +47,8 @@ export async function renderSingleListingPage() {
 
   bids.innerHTML = listing._count.bids;
   bids.textContent = `Number of BIDs: ${bids.innerText}`;
-  sellerAvatar.src = listing.avatar ?? `/images/img-placeholder.png`;
+  sellerAvatar.src =
+  listing.seller?.avatar?.url || "/images/Profile-img-placeholder.jpg";
   sellerName.innerHTML = listing.seller.name;
   sellerEmail.innerHTML = listing.seller.email;
 

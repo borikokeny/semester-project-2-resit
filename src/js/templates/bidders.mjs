@@ -4,7 +4,7 @@ function bidderTemplate(bids) {
 
   const name = document.createElement("h6");
   name.classList.add("col", "mt-3");
-  name.innerText = bids.bidderName;
+  name.innerText = bids.bidder?.name || "Unknown bidder";
 
   const amount = document.createElement("p");
   amount.classList.add("col", "mt-3");
@@ -12,7 +12,9 @@ function bidderTemplate(bids) {
 
   const created = document.createElement("p");
   created.classList.add("col", "mt-3");
-  created.innerText = bids.created.slice(0, -14);
+  created.innerText = bids.created
+    ? new Date(bids.created).toLocaleDateString()
+    : "";
 
   table.append(name, amount, created);
 
@@ -20,6 +22,11 @@ function bidderTemplate(bids) {
 }
 
 export function renderBidderTemplate(bids, parent) {
+  if (!parent) return;
+
   parent.innerHTML = "";
-  parent.append(...bids.map(bidderTemplate));
+
+  if (bids?.length) {
+    parent.append(...bids.map(bidderTemplate));
+  }
 }
